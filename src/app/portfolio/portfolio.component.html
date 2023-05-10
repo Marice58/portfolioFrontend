@@ -1,0 +1,33 @@
+<h1>{{ title }}</h1>
+
+<h2>About</h2>
+<p>{{ about }}</p>
+
+<h2>Professional Experience</h2>
+<div class="portfolio-container">
+    <div class="portfolio-card" *ngFor="let experience of experienceList">
+      <h2>{{ experience.title }}</h2>
+      <p>{{ experience.company }}</p>
+      <p class="year">{{ experience.year }}</p>
+    </div>
+  </div>
+
+<h2>Education</h2>
+<p>{{ education }}</p>
+
+<h2>Additional Training</h2>
+<ul>
+  <li *ngFor="let training of trainingList">{{ training.title }} | {{ training.provider }} | {{ training.date }}</li>
+</ul>
+
+<h2>Skills</h2>
+<table>
+  <tr>
+    <th>Skill</th>
+    <th>Proficiency</th>
+  </tr>
+  <tr *ngFor="let skill of skillsList">
+    <td>{{ skill.name }}</td>
+    <td>{{ skill.proficiency }}</td>
+  </tr>
+</table>
